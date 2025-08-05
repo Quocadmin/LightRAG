@@ -1827,3 +1827,88 @@ primaryClass={cs.IR}
     </div>
   </div>
 </div>
+
+
+
+LightRAG là gì?
+LightRAG là một dự án mã nguồn mở giúp bạn xây dựng hệ thống Retrieval-Augmented Generation (RAG) một cách đơn giản và nhanh chóng.
+RAG là kỹ thuật kết hợp AI (như ChatGPT) với dữ liệu thực tế (tài liệu, PDF, ảnh, bảng tính...) để trả lời chính xác, có trích nguồn.
+
+LightRAG hướng tới:
+
+Cài đặt dễ, vận hành nhanh (hỗ trợ cả giao diện web lẫn API).
+
+Tích hợp với nhiều loại tài liệu: text, PDF, Word, hình ảnh, bảng, công thức...
+
+Có thể mở rộng cho các dự án cá nhân, nghiên cứu, hoặc ứng dụng thực tế (ví dụ: chatbot tư vấn, tra cứu nội bộ, AI search engine...).
+
+Các tính năng nổi bật
+Hỗ trợ đa dạng dữ liệu: Nhờ tích hợp với RAG-Anything, LightRAG có thể đọc tài liệu text, PDF, hình ảnh, bảng, công thức toán, file Office.
+
+Trích xuất tri thức & xây đồ thị: Tự động xây dựng knowledge graph từ tài liệu để trả lời tốt các câu hỏi tổng hợp/phức tạp.
+
+Tối ưu hiệu suất tìm kiếm: Sử dụng nhiều mô hình (LLM, Embedding, Reranker...) và hỗ trợ các hệ cơ sở dữ liệu (JSON, PostgreSQL, Neo4J, v.v).
+
+Hỗ trợ đa mô hình AI: Có thể dùng OpenAI, HuggingFace, Ollama, LlamaIndex...
+
+Citation: Trích nguồn cho từng câu trả lời.
+
+Giao diện web dễ dùng: Có GUI để upload, truy vấn, xem tri thức dạng đồ thị, quản lý tài liệu, export...
+
+Dành cho ai?
+Dev muốn build ứng dụng AI có đọc dữ liệu cá nhân/doanh nghiệp.
+
+Nhà nghiên cứu muốn thử nghiệm các pipeline RAG nhanh chóng.
+
+Người mới làm AI muốn có demo chatbot tra cứu tài liệu riêng.
+
+Sơ lược cách hoạt động
+Nhập tài liệu: Có thể là text, PDF, ảnh, bảng...
+
+Hệ thống sẽ:
+
+Tách nhỏ tài liệu.
+
+Dùng AI để rút trích các thực thể (entity), mối quan hệ, xây knowledge graph.
+
+Dùng mô hình nhúng (embedding) để hỗ trợ tìm kiếm nhanh, chính xác.
+
+Khi hỏi/tra cứu:
+
+LightRAG truy vấn song song trên vector database và knowledge graph.
+
+Tóm tắt, tổng hợp, hoặc chỉ ra nguồn trích dẫn.
+
+Giao diện: Có thể dùng web UI, gọi API, hoặc code Python trực tiếp.
+
+Cài đặt & khởi động nhanh
+Cách dễ nhất là dùng pip (chạy trong Python 3.10+):
+
+bash
+Sao chép
+Chỉnh sửa
+pip install "lightrag-hku[api]"
+cp env.example .env
+lightrag-server
+Có thể chạy qua Docker hoặc build từ mã nguồn nếu thích.
+
+Ứng dụng mẫu
+Chatbot tra cứu dữ liệu nội bộ (ví dụ: nhân viên hỏi chính sách công ty, AI trả lời dựa trên file Word/PDF).
+
+Tìm kiếm AI đa phương tiện: Tra cứu hình ảnh, bảng, file PDF... (không chỉ text).
+
+Tạo đồ thị tri thức từ dữ liệu để phân tích, tổng hợp thông tin, xuất file Excel, CSV...
+
+Lưu ý khi dùng
+Để đạt hiệu quả tốt, nên dùng các mô hình AI đủ lớn (OpenAI GPT-4o, HuggingFace 8B+...) và embedding mạnh.
+
+Cấu hình embedding model cần đồng nhất giữa lúc index và truy vấn.
+
+Có thể dùng nhiều loại storage khác nhau tùy nhu cầu (local, database, cloud).
+
+Tài liệu thêm
+Xem hướng dẫn chi tiết tại README tiếng Trung hoặc README tiếng Anh.
+
+Tham khảo demo trên Youtube: Video hướng dẫn
+
+Nếu bạn muốn bắt đầu code, chỉ cần chạy các lệnh cài đặt, đọc qua phần “Quick Start”, sau đó thử các ví dụ mẫu trong thư mục examples/ là có thể hiểu cơ bản cách sử dụng LightRAG.
